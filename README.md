@@ -1,2 +1,0 @@
-# BPTN
-BPTN Projects
