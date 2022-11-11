@@ -1,9 +1,8 @@
 package com.example.bean;
 
-import org.springframework.data.annotation.Id;
 
 public class Books {
-	@Id
+	
 	private int BookID;
 	private String Title;
 	private String Author;

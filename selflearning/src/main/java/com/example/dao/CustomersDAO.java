@@ -49,7 +49,8 @@ public class CustomersDAO {
 				.addValue("name", customer.getName())
 				.addValue("email", customer.getEmail());
 		namedTemplate.update(sql, param, key, new String[]{"id"});
-		customer.setId(((Long) key.getKeys().get("id")).longValue());
+		
+		customer.setId(key.getKeyAs(Long.class));
 		
 		return customer;
 		

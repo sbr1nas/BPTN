@@ -1,9 +1,7 @@
 package com.example.bean;
 
-import org.springframework.data.annotation.Id;
-
 public class Orders {
-	@Id
+
 	private int orderID; 
 	private int bookID; 
 	private Long customerID; 

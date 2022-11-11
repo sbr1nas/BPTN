@@ -48,7 +48,7 @@ public class OrderDAO {
 				.addValue("bookID", order.getBookID())
 				.addValue("customerID", order.getCustomerID());
 		namedTemplate.update(sql, param, key, new String[] {"orderID"});
-		order.setOrderID(((Integer) key.getKeys().get("orderID")).intValue());
+		order.setOrderID(key.getKeyAs(Integer.class));
 		
 		String view = "REFRESH MATERIALIZED VIEW \"cart\"";
 		jdbcTemplate.update(view);

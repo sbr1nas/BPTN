@@ -19,6 +19,8 @@ public class CartDAO {
 		int id = (int)customerID.intValue();
 		String sql = "SELECT \"orderID\", \"bookID\", \"Title\", \"MSRP\" FROM \"cart\" WHERE \"cart\".\"customerID\" = " +id;
 		
+		//String sql = "SELECT \"orderID\", \"bookID\", \"Title\", \"MSRP\" FROM \"cart\" WHERE \"cart\".\"customerID\" = ?";
+		//above to illustrate SQL error with data type that needs to be cast to int
 		return jdbcTemplate.query(sql, new CartMapper());
 	}
 	

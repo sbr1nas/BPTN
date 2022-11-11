@@ -38,7 +38,8 @@ public class BookDAO {
 				.addValue("author", book.getAuthor())
 				.addValue("MSRP", book.getMSRP());
 		namedTemplate.update(sql, param, key, new String[]{"BookID"});
-		book.setBookID((((Integer) key.getKeys().get("BookID")).intValue()));
+			//need to have String array with name of column so you don't get multiple key exception
+		book.setBookID(key.getKeyAs(Integer.class));
 		
 		return book;
 	}

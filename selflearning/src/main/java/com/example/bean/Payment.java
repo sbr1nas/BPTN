@@ -1,9 +1,7 @@
 package com.example.bean;
 
-import org.springframework.data.annotation.Id;
-
 public class Payment {
-	@Id
+
 	private int PaymentID;
 	private String PaymentType;
 	private Long UserID;

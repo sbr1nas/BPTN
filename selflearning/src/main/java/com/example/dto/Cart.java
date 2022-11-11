@@ -1,8 +1,5 @@
 package com.example.dto;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Cart {
 //not in table - just a place to populate Cart object to place in ResponseBody 
 	private int orderID;
